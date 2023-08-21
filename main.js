@@ -4,5 +4,5 @@ import "./toggle-mode.js"
 import * as focusTimer from "./src/index.js"
 import state from "./src/state.js"
 
-focusTimer.start(0, 3)
+focusTimer.start(25, 0)
 
