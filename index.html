@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoto Time</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./main.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <button id="toggle-mode">
+        <span class="sr-only"> Ativar/Desativar Light Mode</span
+        ><i class="ph-bold ph-sun"></i><i class="ph-bold ph-moon"></i>
+      </button>
+    </div>
+    <main>
+      <div id="app">
+        <div id="app-timer">
+          <div class="timer">
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+          </div>
+          <div id="controls">
+            <button
+              data-actionControls="toggleRunning"
+              class="ph-bold ph-play-circle"
+            >
+              <span class="sr-only">play</span>
+            </button>
+            <button
+              data-actionControls="toggleRunning"
+              class="ph-bold ph-pause-circle"
+            >
+              <span class="sr-only">pause</span>
+            </button>
+            <button data-actionControls="reset" class="ph-bold ph-stop-circle">
+              <span class="sr-only">stop</span>
+            </button>
+            <button
+              data-actionControls="increaseTimer"
+              class="ph-bold ph-plus-circle"
+            >
+              <span class="sr-only">upgrade timer</span>
+            </button>
+            <button
+              data-actionControls="decreaseTimer"
+              class="ph-bold ph-minus-circle"
+            >
+              <span class="sr-only">downgrade Timer</span>
+            </button>
+          </div>
+        </div>
+        <div id="app-sounds">
+          <button
+            data-selectAudio="forestAudio"
+            id="forest"
+            class="btn-sounds ph ph-tree"
+          >
+            <span class="sr-only">nature</span>
+          </button>
+          <button
+            id="marketplace"
+            data-selectAudio="marketplaceAudio"
+            class="btn-sounds ph ph-storefront"
+          >
+            <span class="sr-only">coffe</span>
+          </button>
+          <button
+            id="rain"
+            data-selectAudio="rainAudio"
+            class="btn-sounds ph ph-cloud-rain"
+          >
+            <span class="sr-only">rain</span>
+          </button>
+          <button
+            id="fire"
+            data-selectAudio="fireAudio"
+            class="btn-sounds ph ph-campfire"
+          >
+            <span class="sr-only">fire</span>
+          </button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

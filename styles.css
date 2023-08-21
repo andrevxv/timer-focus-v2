@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+
+  --bg-color: hsla(0, 0%, 100%, 1);
+  --bg-buttons-color: hsla(240, 9%, 89%, 1);
+  --bg-button-active-color: hsla(194, 97%, 31%, 1);
+  --text-color-active-button: hsla(0, 0%, 100%, 1);
+  --text-color: hsla(240, 6%, 21%, 1);
+  --text-button-color: hsla(240, 6%, 21%, 1);
+}
+.light {
+  --bg-color: hsla(240, 6%, 21%, 1);
+  --bg-buttons-color: hsla(240, 9%, 89%, 1);
+  --text-color: hsla(0, 0%, 100%, 1);
+  --text-button-color: hsla(240, 6%, 21%, 1);
+}
+html.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
+}
+html.light .ph-moon,
+html:not(.light) .ph-sun {
+  display: none;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+#toggle-mode {
+  color: var(--text-color);
+  position: absolute;
+  top: 2.6rem;
+  right: 2.6rem;
+  font-size: 4rem;
+
+  background-color: transparent;
+  border: none;
+}
+main {
+  display: grid;
+  height: 100%;
+  place-items: center;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 19rem;
+}
+#app-timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 1.7rem; */
+}
+
+.timer {
+  display: flex;
+  font-size: 12.6rem;
+  color: var(--text-color);
+}
+
+#controls {
+  display: flex;
+  gap: 2.8rem;
+}
+
+#controls button {
+  color: var(--text-color);
+  border: none;
+  background: transparent;
+  font-size: 4.8rem;
+}
+
+#app-sounds {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  gap: 3.2rem;
+  align-items: center;
+  justify-items: center;
+}
+#app-sounds button {
+  font-size: 4.8rem;
+  color: var(--text-button-color);
+  padding: 4.8rem 4.6rem;
+  border-radius: 2.4rem;
+  border: none;
+  transition: background-color 0.5s;
+}
+
+#app-sounds .active-sound {
+  color: var(--text-color-active-button);
+  background: var(--bg-button-active-color);
+}
+#app-sounds button:hover {
+  background-color: var(--bg-button-active-color);
+  color: var(--text-color-active-button);
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
+button {
+  cursor: pointer;
+}
+
+/* sounds class */
+html.tree .ph-tree  {
+
+}
